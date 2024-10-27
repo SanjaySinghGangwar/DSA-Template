@@ -1,4 +1,4 @@
-package DS.Array
+package ds.array
 
 class ArrayList {
     private var data: IntArray = IntArray(10) // Internal array storage
