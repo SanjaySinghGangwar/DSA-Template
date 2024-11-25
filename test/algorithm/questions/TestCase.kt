@@ -242,16 +242,18 @@ class TestCase {
         assertEquals(2, graphAlgorithms.connectedComponents(graph))
     }
 
-//    @Test
-//    fun testShortestPathDijkstra() {
-//        val graph = mapOf(
-//            0 to listOf(Pair(1, 1), Pair(2, 4)),
-//            1 to listOf(Pair(2, 2), Pair(3, 5)),
-//            2 to listOf(Pair(3, 1)),
-//            3 to emptyList()
-//        )
-//        assertEquals(3, graphAlgorithms.dijkstra(graph, 0, 3))
-//    }
+    @Test
+    fun testShortestPathDijkstra() {
+        val graph = mapOf(
+            0 to listOf(Pair(1, 1), Pair(2, 4)),
+            1 to listOf(Pair(2, 2), Pair(3, 5)),
+            2 to listOf(Pair(3, 1)),
+            3 to emptyList()
+        )
+
+        val distances = graphAlgorithms.dijkstra(graph, 0)
+        assertEquals(3, distances[3]) // Shortest distance from node 0 to node 3 is 3
+    }
 
     // Sorting and Searching
     @Test
